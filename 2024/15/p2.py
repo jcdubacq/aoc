@@ -6,6 +6,7 @@ from typing import Tuple
 
 bold = "\x1b\x5b\x37\x6d"
 norm = "\x1b\x5b\x32\x37\x6d"
+home = "\x1b\x5bH"
 
 constraints = {}
 sum = 0
@@ -163,6 +164,7 @@ class Terrain:
             move, what = self.robot.push(i, set())
             if move:
                 self.move(i, what)
+            print(home+str(self))
         print(str(self))
 
     def __str__(self) -> str:
