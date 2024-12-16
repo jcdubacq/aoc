@@ -63,6 +63,7 @@ for line in lines:
         claw.addbutton(b.group(1), b.group(2), b.group(3))
     else:
         p = pre.match(line)
+        assert claw is not None
         if p:
             e = claw.solve(p.group(1), p.group(2))
             if e == None:
