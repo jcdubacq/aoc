@@ -34,6 +34,17 @@ for origline in origlines:
         first = False
 
 
+<<<<<<< HEAD
+def seq(a: int, pow=2000) -> int:
+    l = list(range(pow))
+    se = list(range(pow))
+    l[0] = a
+    ab = aa
+    aa = a % 10
+    b = 0
+    l[0] = a
+    for u in range(1, pow):
+=======
 def seq(a: int, pow=2000) -> Tuple[list[int], list[int], list[int], set[int]]:
     l = list(range(pow))
     p = list(range(pow))
@@ -47,11 +58,24 @@ def seq(a: int, pow=2000) -> Tuple[list[int], list[int], list[int], set[int]]:
     se[0] = b = (aa + 10) << 15
     for u in range(1, pow):
         ab = aa
+>>>>>>> 8ea12396657fce4ac89f12197086a0e3a73506de
         a = ((a << 6) ^ a) & 0xFFFFFF
         a = ((a >> 5) ^ a) & 0xFFFFFF
         a = ((a << 11) ^ a) & 0xFFFFFF
         l[u] = a
         aa = a % 10
+<<<<<<< HEAD
+        delta = aa - bb + 10
+        b = b >> 5 | aa << 20
+        se[u] = b
+    return a
+
+
+for line in lines:
+    a = s(int(line), pow=2000)
+    sum += a
+print(sum)
+=======
         p[u] = aa
         delta = aa - ab + 10  # ranges from 1 to 19
         b = b >> 5 | delta << 15
@@ -94,4 +118,5 @@ bananas = max(d.values())
 e = [printse(x) for x in d if d[x] == bananas]
 print(e)
 print(bananas)
+>>>>>>> 8ea12396657fce4ac89f12197086a0e3a73506de
 sys.exit(0)
