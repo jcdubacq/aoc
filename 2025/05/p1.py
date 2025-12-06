@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 import sys
-from warnings import catch_warnings
-from PIL import Image, ImageDraw
-from numpy import number
 
 # Two part loading
 firstpart = True

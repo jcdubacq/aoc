@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-from logging import logMultiprocessing
-from operator import inv
 import sys
-
-import wsgiref
 
 lines = sys.stdin.readlines()
 
